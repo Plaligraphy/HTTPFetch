@@ -2,7 +2,13 @@ const si = require('systeminformation');
 const http = require('http');
 const eip = require('externalip');
 
-var parse, userIP, cpuName, hasbatt, osdist, osplat;
+var parse, userIP, cpuName, hasbatt, osdist, osplat, fip, sip;
+
+//Grabs network interface data
+si.networkInterfaces(function(data) {
+  fip = data[0].ip4;
+  sip = data[1].ip4;
+});
 
 //CPU brand fetching using package
 si.cpu(function(data) {
@@ -31,7 +37,8 @@ http.createServer(function (req, res) {
   res.write("<h1>IP: </h1>" + userIP + "<br />");
   res.write("<h1>CPU: </h1>" + cpuName + "<br />");
   res.write("<h1>Has Battery: </h1>" + hasbatt + "<br />");
-  res.write("<h1>OS Info: </h1>" + "Platform: " + osplat + "<br />" + "Distro: " + osdist + "<br />");
+  res.write("<h1>OS Info: </h1>" + "Platform: " + osplat + "<br />" + "Distro: " + osdist + "<br />"); 
+  res.write("<h1>Network Interfaces </h1>" + "IPV4 (1): " + fip + "<br />" + "IPV4 (2): " + sip);
   res.end();
 }).listen(8080);
 
