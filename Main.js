@@ -1,11 +1,3 @@
-/*
- * 	      //Evan Carter\\
- * LICENSED
- * 		N0de 1nf0 C0113ct
- * Not to be used for criminal purposes!
- */
-
-//const fs = require('fs');
 const si = require('systeminformation');
 const http = require('http');
 const eip = require('externalip');
@@ -32,13 +24,6 @@ si.osInfo(function(data){
 eip(function(err, ip) {
   userIP = ip;
 });
-
-//Reading the user file and displaying @@Deprecated
-/*fs.readFile("userdata.txt", "utf-8", (err, data) =>
-{
-  if(err) throw err;
-  parse = data.toString();
-});*/
 
 //Creating the hosting server
 http.createServer(function (req, res) {
