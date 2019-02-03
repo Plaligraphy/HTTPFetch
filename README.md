@@ -1,5 +1,6 @@
 # HTTPFetch
 System info fetcher using Nodejs
+### Currently Linux Only!
 ## Getting Started
   1. Download files
   2. Run ```chmod +x run.sh```
