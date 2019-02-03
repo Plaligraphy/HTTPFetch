@@ -5,7 +5,8 @@ System info fetcher using Nodejs
   1. Download files
   2. Run ```chmod +x run.sh```
   3. Run ```. run.sh```
-  4. Prosper..
+  4. Navigate to ```localhost:8080```
+  5. Prosper
 ### Dependancies:
   * Node.js
   * npm
