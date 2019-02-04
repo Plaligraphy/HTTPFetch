@@ -31,7 +31,7 @@ eip(function(err, ip) {
   userIP = ip;
 });
 
-//Creating the hosting server
+//Creating viewable web page through user's Internal IP (localhost)
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   res.write("<h1>IP: </h1>" + userIP + "<br />");
