@@ -4,7 +4,7 @@ System info fetcher using Nodejs
 ## Getting Started
   1. Download files
   2. Run ```chmod +x run.sh```
-  3. Run ```. run.sh``` or ```. silent.sh``` 
+  3. Run ```node Main.js```
   4. Navigate to ```localhost:8080```
   5. Prosper
   
