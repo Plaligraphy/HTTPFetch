@@ -1,12 +1,13 @@
 # HTTPFetch
 System info fetcher using Nodejs
-### Currently Linux Only! Windows Edition in dev
+
 ## Getting Started
   1. Download files
   2. Run ```chmod +x run.sh```
   3. Run ```. run.sh``` or ```. silent.sh``` 
   4. Navigate to ```localhost:8080```
   5. Prosper
+  
 ### Dependancies:
   * Node.js
   * npm
